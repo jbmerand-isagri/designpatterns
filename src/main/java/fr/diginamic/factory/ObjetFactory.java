@@ -14,11 +14,11 @@ public class ObjetFactory {
 	 */
 	public static ObjetConnecte getObjetConnecte(TypeObjetEnum objet) {
 		if (objet.equals(TypeObjetEnum.ENCEINTE_CONNECTE)) {
-			return new EnceinteConnectee(500);
+			return new EnceinteConnectee(15);
 		} else if (objet.equals(TypeObjetEnum.TABLETTE)) {
-			return new Tablette(500);
+			return new Tablette(10);
 		} else if (objet.equals(TypeObjetEnum.TELEPHONE_PORTABLE)) {
-			return new TelephonePortable(500);
+			return new TelephonePortable(5);
 		}
 		return null;
 	}

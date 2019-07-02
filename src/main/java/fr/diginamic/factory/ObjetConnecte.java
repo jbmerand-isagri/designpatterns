@@ -3,7 +3,7 @@ package fr.diginamic.factory;
 /**
  * Représente un objet connecté abstrait.
  */
-public abstract class ObjetConnecte {
+public abstract class ObjetConnecte implements Chargeable {
 
 	/** limiteVolts : int */
 	int limiteVolts;
@@ -12,11 +12,7 @@ public abstract class ObjetConnecte {
 		this.limiteVolts = limiteVolts;
 	}
 
-	/**
-	 * Définit la valeur idéale de voltage pour la recharge.
-	 * 
-	 * @param volts
-	 */
+	@Override
 	public abstract void recharger(int volts);
 
 	/**
