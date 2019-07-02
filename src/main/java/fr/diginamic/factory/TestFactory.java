@@ -12,16 +12,13 @@ public class TestFactory {
 	 */
 	public static void main(String args[]) {
 
-		ObjetConnecte telephone = ObjetFactory.getObjetConnecte(3);
-		telephone.setLimiteVolts(500);
+		ObjetConnecte telephone = ObjetFactory.getObjetConnecte(TypeObjetEnum.TELEPHONE_PORTABLE);
 		telephone.recharger(900);
 
-		ObjetConnecte tablette = ObjetFactory.getObjetConnecte(2);
-		tablette.setLimiteVolts(500);
+		ObjetConnecte tablette = ObjetFactory.getObjetConnecte(TypeObjetEnum.TABLETTE);
 		tablette.recharger(500);
 
-		ObjetConnecte enceinte = ObjetFactory.getObjetConnecte(1);
-		enceinte.setLimiteVolts(500);
+		ObjetConnecte enceinte = ObjetFactory.getObjetConnecte(TypeObjetEnum.ENCEINTE_CONNECTE);
 		enceinte.recharger(300);
 	}
 

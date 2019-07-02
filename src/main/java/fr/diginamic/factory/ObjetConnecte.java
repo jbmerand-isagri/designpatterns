@@ -8,6 +8,10 @@ public abstract class ObjetConnecte {
 	/** limiteVolts : int */
 	int limiteVolts;
 
+	public ObjetConnecte(int limiteVolts) {
+		this.limiteVolts = limiteVolts;
+	}
+
 	/**
 	 * Définit la valeur idéale de voltage pour la recharge.
 	 * 

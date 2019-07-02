@@ -5,6 +5,15 @@ package fr.diginamic.factory;
  */
 public class TelephonePortable extends ObjetConnecte {
 
+	/**
+	 * Constructor
+	 * 
+	 * @param limiteVolts
+	 */
+	public TelephonePortable(int limiteVolts) {
+		super(limiteVolts);
+	}
+
 	@Override
 	public void recharger(int volts) {
 		if (volts < limiteVolts) {

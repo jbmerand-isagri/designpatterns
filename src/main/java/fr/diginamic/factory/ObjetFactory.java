@@ -8,17 +8,17 @@ public class ObjetFactory {
 	/**
 	 * Méthode Factory pour instancier un type d'objet connecté.
 	 * 
-	 * @param type int : numéro correspond à la classe concrète de l'objet
+	 * @param objet : enum précisant la classe concrète de l'objet qui sera retourné
 	 * @return ObjetConnecte : objet dont la classe concrète est définie par le
 	 *         paramètre
 	 */
-	public static ObjetConnecte getObjetConnecte(int type) {
-		if (type == 1) {
-			return new EnceinteConnectee();
-		} else if (type == 2) {
-			return new Tablette();
-		} else if (type == 3) {
-			return new TelephonePortable();
+	public static ObjetConnecte getObjetConnecte(TypeObjetEnum objet) {
+		if (objet.equals(TypeObjetEnum.ENCEINTE_CONNECTE)) {
+			return new EnceinteConnectee(500);
+		} else if (objet.equals(TypeObjetEnum.TABLETTE)) {
+			return new Tablette(500);
+		} else if (objet.equals(TypeObjetEnum.TELEPHONE_PORTABLE)) {
+			return new TelephonePortable(500);
 		}
 		return null;
 	}

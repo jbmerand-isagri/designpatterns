@@ -5,6 +5,15 @@ package fr.diginamic.factory;
  */
 public class Tablette extends ObjetConnecte {
 
+	/**
+	 * Constructor
+	 * 
+	 * @param limiteVolts
+	 */
+	public Tablette(int limiteVolts) {
+		super(limiteVolts);
+	}
+
 	@Override
 	public void recharger(int volts) {
 		if (volts < limiteVolts) {
